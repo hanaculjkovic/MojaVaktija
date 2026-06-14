@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Početna – Moja Vaktija</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <main>
+    <div class="home-wrapper">
+
+      <div class="city-selector">
+        <h1 class="city-name" id="cityName"></h1>
+        <div class="city-dropdown-wrapper">
+          <select id="citySelect" class="city-select">
+            <option value="107">Novi Pazar</option>
+            <option value="77">Sarajevo</option>
+            <option value="1">Zenica</option>
+            <option value="78">Mostar</option>
+            <option value="79">Banja Luka</option>
+            <option value="80">Tuzla</option>
+            <option value="81">Bihać</option>
+            <option value="82">Cazin</option>
+            <option value="83">Sanski Most</option>
+            <option value="84">Travnik</option>
+            <option value="85">Goražde</option>
+            <option value="86">Foča</option>
+            <option value="87">Trebinje</option>
+            <option value="88">Prijedor</option>
+            <option value="89">Doboj</option>
+            <option value="90">Brčko</option>
+          </select>
+          <span class="dropdown-icon">⌄</span>
+        </div>
+      </div>
+
+      <div class="vaktija-card card" id="vaktija-main">
+        <div class="prayer-grid">
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_zora">ZORA</span>
+            <span class="prayer-time" id="t-zora">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_sunce">SUNCE</span>
+            <span class="prayer-time" id="t-sunce">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_podne">PODNE</span>
+            <span class="prayer-time" id="t-podne">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_ikindija">IKINDIJA</span>
+            <span class="prayer-time" id="t-ikindija">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_aksam">AKŠAM</span>
+            <span class="prayer-time" id="t-aksam">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_jacija">JACIJA</span>
+            <span class="prayer-time" id="t-jacija">--:--</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="vaktija-card card secondary-card">
+        <div class="secondary-grid">
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_polovina">POLOVINA NOĆI</span>
+            <span class="prayer-time" id="t-polovina">--:--</span>
+          </div>
+          <div class="prayer-item">
+            <span class="prayer-name" data-i18n="home_zadnja">ZADNJA TREĆINA</span>
+            <span class="prayer-time" id="t-zadnja">--:--</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span data-i18n="footer_text">moja.vaktija ©</span>
+  </footer>
+
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

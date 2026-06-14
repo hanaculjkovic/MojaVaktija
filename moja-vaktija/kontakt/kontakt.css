@@ -1,0 +1,122 @@
+/* Kontakt Page */
+main {
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.kontakt-wrapper {
+  width: 100%;
+  max-width: 800px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(247,237,216,0.08);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 4rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.kontakt-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.kontakt-title {
+  font-family: var(--fh);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 6px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.full-width { width: 100%; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.6rem;
+}
+
+/* Labels — jasno vidljivi */
+.kontakt-label {
+  display: block;
+  font-family: var(--fh);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(247,237,216,0.92);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.kontakt-input {
+  width: 100%;
+  background: rgba(250,243,224,0.92);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  font-family: var(--fb);
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.25s;
+}
+
+.kontakt-input:focus {
+  border-color: var(--accent);
+  background: var(--cream-solid);
+  box-shadow: 0 0 0 3px rgba(192,120,64,0.18);
+}
+
+.kontakt-input.error { border-color: #d94f4f; }
+
+.kontakt-textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.7;
+}
+
+.submit-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.posalji-btn {
+  min-width: 220px;
+  padding: 1rem 2.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+}
+
+.error-msg {
+  color: #ff9090;
+  font-size: 0.88rem;
+  margin-top: 0.4rem;
+  display: none;
+}
+.error-msg.visible { display: block; }
+
+@media (max-width: 640px) {
+  main { padding: 2.5rem 1rem; }
+  .kontakt-wrapper { padding: 2.5rem 1.8rem; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .kontakt-title { font-size: 1.3rem; letter-spacing: 4px; }
+}

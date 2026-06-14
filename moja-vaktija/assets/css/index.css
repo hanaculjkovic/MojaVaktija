@@ -1,0 +1,64 @@
+/* Landing Page */
+main {
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.landing-card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  padding: 4rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.landing-logo {
+  height: 105px;
+  width: auto;
+  filter: drop-shadow(0 4px 14px rgb(72, 85, 59));
+}
+
+.landing-title {
+  font-family: var(--fh);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 7px;
+  line-height: 1.2;
+}
+
+.landing-sub {
+  font-family: var(--fh);
+  font-size: 0.7rem;
+  letter-spacing: 2.5px;
+  color: var(--text-muted);
+  line-height: 2.2;
+}
+
+.landing-btn {
+  width: 100%;
+  max-width: 260px;
+  padding: 1rem 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 480px) {
+  .landing-card { padding: 3rem 1.8rem; gap: 1.5rem; }
+  .landing-title { font-size: 2rem; letter-spacing: 5px; }
+  .landing-logo { height: 82px; }
+}

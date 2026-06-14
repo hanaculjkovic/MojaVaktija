@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Moja Vaktija</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="kontakt.css" />
+</head>
+<body>
+  <main>
+    <div class="kontakt-wrapper">
+      <h1 class="kontakt-title" data-i18n="nav_contact">KONTAKT</h1>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="kontakt-label" data-i18n="contact_ime">IME :</label>
+          <input type="text" id="ime" class="kontakt-input" />
+          <p class="error-msg" id="err-ime"></p>
+        </div>
+        <div class="form-group">
+          <label class="kontakt-label" data-i18n="contact_prezime">PREZIME :</label>
+          <input type="text" id="prezime" class="kontakt-input" />
+          <p class="error-msg" id="err-prezime"></p>
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label class="kontakt-label" data-i18n="contact_email">EMAIL ADRESA :</label>
+        <input type="email" id="email" class="kontakt-input" />
+        <p class="error-msg" id="err-email"></p>
+      </div>
+
+      <div class="form-group full-width">
+        <label class="kontakt-label" data-i18n="contact_poruka">PORUKA :</label>
+        <textarea id="poruka" class="kontakt-input kontakt-textarea"></textarea>
+        <p class="error-msg" id="err-poruka"></p>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn btn-primary posalji-btn" id="posaljiBtn" data-i18n="contact_posalji">POŠALJI</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <span data-i18n="footer_text">moja.vaktija ©</span>
+  </footer>
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="kontakt.js"></script>
+</body>
+</html>

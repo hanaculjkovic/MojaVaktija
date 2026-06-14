@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prijava – Moja Vaktija</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main>
+    <div class="login-card card-dark">
+      <img src="../assets/images/logo.png" alt="Logo" class="login-logo" />
+      <h1 class="login-title" data-i18n="login_title">PRIJAVA</h1>
+
+      <div class="form-group">
+        <label class="form-label" data-i18n="login_username">KORISNIČKO IME</label>
+        <input type="text" id="username" class="form-input" autocomplete="username" />
+        <p class="error-msg" id="err-username"></p>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" data-i18n="login_password">LOZINKA</label>
+        <input type="password" id="password" class="form-input" autocomplete="current-password" />
+        <p class="error-msg" id="err-password"></p>
+      </div>
+
+      <p class="error-msg" id="err-general"></p>
+      <button class="btn btn-primary login-btn" id="loginBtn" data-i18n="login_btn">PRIJAVI SE</button>
+    </div>
+  </main>
+
+  <footer>
+    <span data-i18n="footer_text">moja.vaktija ©</span>
+  </footer>
+
+  <script src="../assets/js/users.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

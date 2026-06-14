@@ -1,0 +1,121 @@
+/* Zikr Page */
+main {
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.zikr-wrapper {
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.zikr-title {
+  font-family: var(--fh);
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 7px;
+  text-align: center;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.45);
+}
+
+.zikr-card {
+  width: 100%;
+  padding: 3.5rem 4rem;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  transition: opacity 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.zikr-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.zikr-count-badge {
+  background: var(--accent);
+  color: var(--text-light);
+  font-family: var(--fh);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  padding: 0.35rem 1.1rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 12px rgba(192,120,64,0.35);
+}
+
+.zikr-arabic {
+  font-size: 2.2rem;
+  color: var(--accent);
+  font-family: 'Scheherazade New', 'Traditional Arabic', serif;
+  line-height: 2.2;
+  direction: rtl;
+}
+
+.zikr-text {
+  font-family: var(--fb);
+  font-size: 1.2rem;
+  line-height: 2;
+  color: var(--text-dark);
+  font-style: italic;
+  max-width: 580px;
+}
+
+.zikr-translation {
+  font-family: var(--fh);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.zikr-controls {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.zikr-nav-btn {
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  min-width: 56px;
+}
+
+.zikr-counter {
+  font-family: var(--fh);
+  font-size: 1.22rem;
+  letter-spacing: 2px;
+  color: #2e3b28;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  min-width: 60px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.fade-out { opacity: 0; }
+
+@media (max-width: 600px) {
+  main { padding: 2.5rem 1rem; }
+  .zikr-card { padding: 2.5rem 1.8rem; min-height: 270px; gap: 1.5rem; }
+  .zikr-title { font-size: 1.4rem; letter-spacing: 5px; }
+  .zikr-arabic { font-size: 1.6rem; }
+  .zikr-text { font-size: 1.05rem; }
+}
