@@ -162,9 +162,9 @@ function isLoggedIn() {
 }
 
 function requireAuth() {
-  // if (!isLoggedIn()) {
-  //   window.location.href = getRootPath() + 'index.html';
-  // }
+  if (!isLoggedIn()) {
+    window.location.href = getRootPath() + 'index.html';
+    }
 }
 
 function signOut() {
@@ -213,7 +213,7 @@ function initNavbar() {
     });
   }
 
-  // Apply current language
+  // Primeni trenutni jezik
   applyTranslations(getLang());
 }
 

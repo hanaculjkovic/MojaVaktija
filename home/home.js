@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const citySelect = document.getElementById('citySelect');
   const cityName = document.getElementById('cityName');
 
-  // City names for display
+  // Imena gradova po ID-ju (prema vaktija.ba API)
   const cityNames = {
     '107': { sr: 'NOVI PAZAR', en: 'NOVI PAZAR' },
     '77':  { sr: 'SARAJEVO', en: 'SARAJEVO' },
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimes({ zora:'--:--', sunce:'--:--', podne:'--:--', ikindija:'--:--', aksam:'--:--', jacija:'--:--', polovina:'--:--', zadnja:'--:--' });
 
     try {
-      // Get today's date for the API
+      // Dobijanje trenutnog datuma 
       const now = new Date();
       const day = now.getDate();
       const month = now.getMonth() + 1;
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const data = await res.json();
 
-      // vaktija.ba API returns: vakat array [fajr, sunrise, dhuhr, asr, maghrib, isha]
-      // and may include additional fields
+      // vaktija.ba API vraca: vakat array [fajr, sunrise, dhuhr, asr, maghrib, isha]
+      
       if (data && data.vakat) {
         const v = data.vakat;
         setTimes({
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (err) {
       console.error('Vaktija API error:', err);
-      // Try alternative endpoint format
+      
       try {
         const url2 = `https://api.vaktija.ba/vaktija/v1/${cityId}`;
         const res2 = await fetch(url2);
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function formatTime(timeStr) {
     if (!timeStr) return '--:--';
-    // API may return "HH:MM" or "H:MM"
+    // API može vratiti "HH:MM" ili "H:MM"
     const parts = timeStr.split(':');
     if (parts.length >= 2) {
       return parts[0].padStart(2,'0') + ':' + parts[1].padStart(2,'0');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return timeStr;
   }
 
-  // Calculate midnight (midpoint between maghrib and next fajr)
+  // Izračunaj ponoć (sredina noći između ahsama i narednog sabaha)
   function calcMidnight(maghrib, fajr) {
     try {
       const m = timeToMinutes(maghrib);
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch { return '--:--'; }
   }
 
-  // Calculate last third (2/3 between maghrib and next fajr)
+  // Izračunaj poslednju trećinu (2/3 između maghriba i narednog fajra)
   function calcLastThird(maghrib, fajr) {
     try {
       const m = timeToMinutes(maghrib);

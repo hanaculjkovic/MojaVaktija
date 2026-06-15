@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   posaljiBtn.addEventListener('click', handleSubmit);
 
-  // Enter submits from inputs
+  //  Omogućiti slanje forme pritiskom na Enter u bilo kojem inputu
   ['ime','prezime','email'].forEach(id => {
     document.getElementById(id).addEventListener('keydown', (e) => {
       if (e.key === 'Enter') handleSubmit();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (valid) {
-      // Store message data in sessionStorage for confirmation page
+      // Čuvanje poruke u sessionStorage da bi se prikazala na stranici "Poruka poslana"
       sessionStorage.setItem('mv_contact', JSON.stringify({ ime, prezime, email, poruka }));
       window.location.href = '../poruka-poslata/index.html';
     }

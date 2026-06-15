@@ -1,10 +1,10 @@
 // login.js
 
 document.addEventListener('DOMContentLoaded', () => {
-  // if (isLoggedIn()) {
-  //   window.location.href = '../home/index.html';
-  //   return;
-  // }
+  if (isLoggedIn()) {
+    window.location.href = '../home/index.html';
+    return;
+  }
 
   applyTranslations(getLang());
 

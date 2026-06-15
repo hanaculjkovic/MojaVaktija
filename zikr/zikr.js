@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') goTo(currentIndex + 1);
   });
 
-  // Re-render on language change (patch toggleLang)
+  // Update zikr display kad se promeni jezik
   const origToggle = window.toggleLang;
   window.toggleLang = function() {
     origToggle();
